@@ -1,0 +1,94 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tingtingfm.png" width="80" alt="听听FM" />
+</p>
+
+# 听听FM
+
+听听FM APP「任务中心」每日签到，领成长值 + 金币。
+
+## 文件
+
+- `tingtingfm.js` — 既是重写抓 Cookie 也是 cron 签到，根据 `$request` 是否存在区分
+
+## 使用步骤
+
+1. 按下方对应平台配置，开启重写脚本 + cron
+2. 打开听听FM APP →「我的」→「任务中心」，停留 1 秒触发 `/sns/app` 请求
+3. 收到 `✅ 听听FM Cookie 获取成功` 通知即抓取成功
+4. cron 会按计划自动签到
+
+## Loon
+
+```ini
+[MITM]
+hostname = xunting.vbegin.com.cn
+
+[Script]
+http-request ^https:\/\/xunting\.vbegin\.com\.cn\/sns\/app tag=听听FM Cookie, script-path=https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/tingtingfm/tingtingfm.js, requires-body=false, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tingtingfm.png
+
+cron "20 9 * * *" script-path=https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/tingtingfm/tingtingfm.js, tag=听听FM签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tingtingfm.png, enable=true
+```
+
+## Surge
+
+```ini
+[MITM]
+hostname = xunting.vbegin.com.cn
+
+[Script]
+听听FM Cookie = type=http-request,pattern=^https:\/\/xunting\.vbegin\.com\.cn\/sns\/app,requires-body=false,max-size=0,script-path=https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/tingtingfm/tingtingfm.js,img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tingtingfm.png
+
+听听FM签到 = type=cron,cronexp=20 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/tingtingfm/tingtingfm.js,img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tingtingfm.png
+```
+
+## Quantumult X
+
+```ini
+[MITM]
+hostname = xunting.vbegin.com.cn
+
+[rewrite_local]
+^https:\/\/xunting\.vbegin\.com\.cn\/sns\/app url script-request-header https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/tingtingfm/tingtingfm.js
+
+[task_local]
+20 9 * * * https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/tingtingfm/tingtingfm.js, tag=听听FM签到, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/tingtingfm.png, enabled=true
+```
+
+## Stash
+
+```yaml
+cron:
+  script:
+    - name: 听听FM签到
+      cron: '20 9 * * *'
+      timeout: 60
+
+http:
+  mitm:
+    - "xunting.vbegin.com.cn"
+  script:
+    - match: ^https:\/\/xunting\.vbegin\.com\.cn\/sns\/app
+      name: 听听FM Cookie
+      type: request
+      require-body: false
+
+script-providers:
+  听听FM签到:
+    url: https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/tingtingfm/tingtingfm.js
+    interval: 86400
+```
+
+## 说明
+
+- 每日自动签到(+2 成长值 +5 金币,每日 1 次);只做签到——「听 15 分钟」「分享广播」需真实行为,脚本不刷。
+
+## 维护记录
+
+| 日期 | 变更 |
+|---|---|
+| 2026-06-18 | 初版 |
+
+## 已知限制
+
+- **`s_k` 时效**：会话密钥随 APP 登录态签发，实测较长效、daily cron 稳定。失效时签到会收到「🚫 会话密钥失效」通知，重进「任务中心」抓一次即可。
+- token 为一次性，cron 每次会先 `POST /sns/app` 换新，无需手动维护。

@@ -1,0 +1,1671 @@
+{
+  "id": "MaYIHEI.paperclip",
+  "name": "Paperclip",
+  "author": "@MaYIHEI",
+  "icon": "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/paperclip.png",
+  "repo": "https://github.com/MaYIHEI/paperclip",
+  "apps": [
+    {
+      "id": "paperclip.ppmt",
+      "name": "泡泡玛特",
+      "keys": [
+        "ppmt_data",
+        "ppmt_clear",
+        "is_debug"
+      ],
+      "settings": [
+        {
+          "id": "ppmt_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "is_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后会打印详细请求/响应日志"
+        }
+      ],
+      "author": "@Sliverkiss, 修复 @MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/ppmt",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/ppmt/ppmt.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/popmart.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/popmart.png"
+      ]
+    },
+    {
+      "id": "paperclip.tuhu",
+      "name": "途虎养车",
+      "keys": [
+        "tuhu_token",
+        "tuhu_blackbox",
+        "tuhu_clear"
+      ],
+      "settings": [
+        {
+          "id": "tuhu_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        }
+      ],
+      "author": "@FoKit, blackBox @Sliverkiss, 适配 @MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/tuhu",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/tuhu/tuhu.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/tuhu.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/tuhu.png"
+      ]
+    },
+    {
+      "id": "paperclip.bibisheng",
+      "name": "微信支付笔笔省 (已归档)",
+      "keys": [
+        "bbs_session_token",
+        "bbs_appid",
+        "bbs_module",
+        "bbs_page"
+      ],
+      "settings": [],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/bibisheng",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/bibisheng/bibisheng.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/bibisheng/bibisheng.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/bibisheng/bibisheng.cookie.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/bibisheng.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/bibisheng.png"
+      ]
+    },
+    {
+      "id": "paperclip.haidilao",
+      "name": "海底捞",
+      "keys": [
+        "hdl_data",
+        "hdl_clear",
+        "bark_key",
+        "is_debug"
+      ],
+      "settings": [
+        {
+          "id": "hdl_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        }
+      ],
+      "author": "@Sliverkiss, 修复 @MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/haidilao",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/haidilao/haidilao.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/haidilao.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/haidilao.png"
+      ]
+    },
+    {
+      "id": "paperclip.huisheng",
+      "name": "惠省红包墙",
+      "keys": [
+        "huisheng_headers",
+        "huisheng_list_body",
+        "huisheng_delete_cookie",
+        "huisheng_request_time",
+        "huisheng_debug"
+      ],
+      "settings": [
+        {
+          "id": "huisheng_delete_cookie",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次会清空所有已抓的 Cookie，完成后会自动复位为关闭"
+        },
+        {
+          "id": "huisheng_request_time",
+          "name": "请求间隔(ms)",
+          "val": "500",
+          "type": "text",
+          "placeholder": "500",
+          "desc": "列表和领取接口之间的等待毫秒数"
+        },
+        {
+          "id": "huisheng_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印 list/grant 请求体和响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/huisheng",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/huisheng/huisheng.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/huisheng/huisheng.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/huisheng/huisheng.cookie.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/huisheng.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/huisheng.png"
+      ]
+    },
+    {
+      "id": "paperclip.miniso",
+      "name": "名创优品",
+      "keys": [
+        "miniso_data",
+        "miniso_clear",
+        "mc_debug"
+      ],
+      "settings": [
+        {
+          "id": "miniso_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "mc_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印详细请求/响应日志"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/miniso",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/miniso/miniso.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/miniso.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/miniso.png"
+      ]
+    },
+    {
+      "id": "paperclip.longde",
+      "name": "龙德广场",
+      "keys": [
+        "longde_token",
+        "longde_clear"
+      ],
+      "settings": [
+        {
+          "id": "longde_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/longde",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/longde/longde.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/longde.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/longde.png"
+      ]
+    },
+    {
+      "id": "paperclip.bhg",
+      "name": "北京华联",
+      "keys": [
+        "bhg_token",
+        "bhg_mallid",
+        "bhg_clear",
+        "bhg_debug"
+      ],
+      "settings": [
+        {
+          "id": "bhg_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "bhg_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到 / 状态接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/bhg",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/bhg/bhg.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/bhg.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/bhg.png"
+      ]
+    },
+    {
+      "id": "paperclip.weibotalk",
+      "name": "微博超话",
+      "keys": [
+        "evil_tokenurl",
+        "evil_tokenheaders",
+        "evil_tokenbody",
+        "evil_tokencheckinurl",
+        "evil_tokencheckinheaders",
+        "wb_delete_cookie",
+        "wb_msg_max_num",
+        "wb_request_time"
+      ],
+      "settings": [
+        {
+          "id": "wb_delete_cookie",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次会清空所有已抓的 Cookie，完成后会自动复位为关闭"
+        },
+        {
+          "id": "wb_msg_max_num",
+          "name": "单条通知最大数量",
+          "val": "30",
+          "type": "text",
+          "placeholder": "30",
+          "desc": "单条通知显示的超话数量"
+        },
+        {
+          "id": "wb_request_time",
+          "name": "请求间隔(ms)",
+          "val": "700",
+          "type": "text",
+          "placeholder": "700",
+          "desc": "关注超话多时建议调到 1000+"
+        }
+      ],
+      "author": "@Evilbutcher / @toulanboy, 适配 @MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/weibotalk",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/weibotalk/weibotalk.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/weibotalk/weibotalk.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/weibotalk/weibotalk.cookie.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/weibo.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/weibo.png"
+      ]
+    },
+    {
+      "id": "paperclip.mihoyo",
+      "name": "米游社",
+      "keys": [
+        "mhy_stoken_cookie",
+        "mhy_game_roles",
+        "mhy_web_cookie",
+        "mhy_web_headers",
+        "mhy_delete_cookie",
+        "mhy_games",
+        "mhy_req_interval"
+      ],
+      "settings": [
+        {
+          "id": "mhy_delete_cookie",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次会清空所有已抓的 Cookie，完成后会自动复位为关闭"
+        },
+        {
+          "id": "mhy_games",
+          "name": "签到游戏过滤",
+          "val": "",
+          "type": "text",
+          "placeholder": "留空 = 全部游戏",
+          "desc": "逗号分隔: hk4e_cn(原神) hkrpg_cn(星穹铁道) nap_cn(绝区零) bh3_cn(崩坏3) bh2_cn(崩坏学园2) nxx_cn(未定事件簿)"
+        },
+        {
+          "id": "mhy_req_interval",
+          "name": "游戏签到间隔(ms)",
+          "val": "2000",
+          "type": "text",
+          "placeholder": "2000",
+          "desc": "两个游戏签到之间的等待毫秒数"
+        }
+      ],
+      "author": "@MaYIHEI (业务参考 @kayanouriko / @daye99 / @Womsxd)",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/mihoyo",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/mihoyo/mihoyo.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/mihoyo/mihoyo.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/mihoyo/mihoyo.cookie.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/mihoyo.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/mihoyo.png"
+      ]
+    },
+    {
+      "id": "paperclip.tenvideo",
+      "name": "腾讯视频",
+      "keys": [
+        "tenvideo_cookie",
+        "tenvideo_clear",
+        "tenvideo_debug"
+      ],
+      "settings": [
+        {
+          "id": "tenvideo_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "tenvideo_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印 Account/Refresh 与签到响应"
+        }
+      ],
+      "author": "@WowYiJiu, 精简 + 适配新接口 @MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/tenvideo",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/tenvideo/tenvideo.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/tenvideo.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/tenvideo.png"
+      ]
+    },
+    {
+      "id": "paperclip.newmixc",
+      "name": "一点万象",
+      "keys": [
+        "newmixc_data",
+        "newmixc_clear",
+        "newmixc_debug"
+      ],
+      "settings": [
+        {
+          "id": "newmixc_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "newmixc_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/newmixc",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/newmixc/newmixc.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/newmixc/newmixc.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/newmixc/newmixc.cookie.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/newmixc.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/newmixc.png"
+      ]
+    },
+    {
+      "id": "paperclip.lhtj",
+      "name": "龙湖天街",
+      "keys": [
+        "lhtj_headers",
+        "lhtj_clear"
+      ],
+      "settings": [
+        {
+          "id": "lhtj_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/lhtj",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/lhtj/lhtj.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/lhtj.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/lhtj.png"
+      ]
+    },
+    {
+      "id": "paperclip.lhtj_app",
+      "name": "龙湖天街 App",
+      "keys": [
+        "lhtj_app_data",
+        "lhtj_app_clear",
+        "lhtj_app_done",
+        "lhtj_app_target",
+        "lhtj_app_random",
+        "lhtj_app_window",
+        "lhtj_app_lottery",
+        "lhtj_app_debug"
+      ],
+      "settings": [
+        {
+          "id": "lhtj_app_random",
+          "name": "随机签到时间",
+          "val": true,
+          "type": "boolean",
+          "desc": "开启后每天在时段内随机摇一个签到时间(需配密集 cron，如 */19 8-10 * * *)；关闭则 cron 命中即签"
+        },
+        {
+          "id": "lhtj_app_window",
+          "name": "随机时段(小时)",
+          "val": "8-10",
+          "type": "text",
+          "placeholder": "8-10",
+          "desc": "随机签到的时段，仅在「随机签到时间」开启时生效"
+        },
+        {
+          "id": "lhtj_app_lottery",
+          "name": "自动抽奖",
+          "val": true,
+          "type": "boolean",
+          "desc": "签到后自动领抽奖次数并抽到次数耗尽(随机珑珠，含大奖)"
+        },
+        {
+          "id": "lhtj_app_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "lhtj_app_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到/抽奖各接口的请求与响应日志"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/lhtj",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/lhtj/lhtj.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/lhtj.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/lhtj.png"
+      ]
+    },
+    {
+      "id": "paperclip.wanda",
+      "name": "万达电影",
+      "keys": [
+        "wanda_data",
+        "wanda_clear",
+        "wanda_debug"
+      ],
+      "settings": [
+        {
+          "id": "wanda_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "wanda_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印 ts/check 与签到响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/wanda",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/wanda/wanda.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/wanda/wanda.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/wanda/wanda.cookie.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/wanda.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/wanda.png"
+      ]
+    },
+    {
+      "id": "paperclip.qqmusic",
+      "name": "QQ音乐",
+      "keys": [
+        "qqmusic_data",
+        "qqmusic_run_state",
+        "qqmusic_clear",
+        "qqmusic_task_favorite",
+        "qqmusic_task_activity",
+        "qqmusic_debug"
+      ],
+      "settings": [
+        {
+          "id": "qqmusic_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "qqmusic_task_favorite",
+          "name": "收藏任务",
+          "val": "true",
+          "type": "selects",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ],
+          "desc": "临时收藏歌曲、歌单、有声书并关注歌手，领取任务金币后自动恢复原状态"
+        },
+        {
+          "id": "qqmusic_task_activity",
+          "name": "附属活动任务",
+          "val": "true",
+          "type": "selects",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ],
+          "desc": "执行金币抽奖签到、使用剩余抽奖次数、红包雨、浮动宝箱和可直接上报的活动任务（含种摇钱树领免费绿钻任务卡）"
+        },
+        {
+          "id": "qqmusic_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印续期、签到与每日任务诊断日志，不输出 Cookie"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/qqmusic",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/qqmusic/qqmusic.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/qqmusic/qqmusic.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/qqmusic/qqmusic.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/qqmusic.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/qqmusic.png"
+      ]
+    },
+    {
+      "id": "paperclip.casetify",
+      "name": "CASETiFY (已归档)",
+      "keys": [
+        "casetify_token",
+        "casetify_hqtoken",
+        "is_debug"
+      ],
+      "settings": [],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/casetify",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/casetify/casetify.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/casetify.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/casetify.png"
+      ]
+    },
+    {
+      "id": "paperclip.songshan",
+      "name": "松山棉店",
+      "keys": [
+        "songshan_headers",
+        "songshan_body",
+        "songshan_clear",
+        "songshan_debug"
+      ],
+      "settings": [
+        {
+          "id": "songshan_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "songshan_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到请求体和响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/songshan",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/songshan/songshan.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/songshan.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/songshan.png"
+      ]
+    },
+    {
+      "id": "paperclip.wedome",
+      "name": "味多美",
+      "keys": [
+        "wedome_openid",
+        "wedome_clear",
+        "wedome_debug"
+      ],
+      "settings": [
+        {
+          "id": "wedome_openid",
+          "name": "公众号 openid",
+          "val": "",
+          "type": "text",
+          "placeholder": "进小程序自动抓，或手填",
+          "desc": "味多美公众号 openid(永久固定)；留空则靠抓取自动写入"
+        },
+        {
+          "id": "wedome_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 openid，完成后自动复位为关闭；之后重进小程序「我的」页重新抓取"
+        },
+        {
+          "id": "wedome_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印 loginByOpenid / 签到响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/wedome",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/wedome/wedome.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/wedome.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/wedome.png"
+      ]
+    },
+    {
+      "id": "paperclip.topsports",
+      "name": "滔搏 (已归档)",
+      "keys": [
+        "topsports_cookie",
+        "topsports_debug"
+      ],
+      "settings": [],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/topsports",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/topsports/topsports.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/topsports.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/topsports.png"
+      ]
+    },
+    {
+      "id": "paperclip.mishop",
+      "name": "小米商城",
+      "keys": [
+        "mishop_data",
+        "mishop_clear",
+        "mishop_debug"
+      ],
+      "settings": [
+        {
+          "id": "mishop_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "mishop_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/mishop",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/mishop/mishop.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/mishop/mishop.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/mishop/mishop.cookie.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/mishop.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/mishop.png"
+      ]
+    },
+    {
+      "id": "paperclip.youpin",
+      "name": "小米有品",
+      "keys": [
+        "youpin_data",
+        "youpin_clear",
+        "youpin_debug"
+      ],
+      "settings": [
+        {
+          "id": "youpin_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "youpin_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/youpin",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/youpin/youpin.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/youpin.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/youpin.png"
+      ]
+    },
+    {
+      "id": "paperclip.tingtingfm",
+      "name": "听听FM",
+      "keys": [
+        "tingtingfm_data",
+        "tingtingfm_clear",
+        "tingtingfm_debug"
+      ],
+      "settings": [
+        {
+          "id": "tingtingfm_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭；之后重新抓取"
+        },
+        {
+          "id": "tingtingfm_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印换 token / 签到请求与响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/tingtingfm",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/tingtingfm/tingtingfm.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/tingtingfm.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/tingtingfm.png"
+      ]
+    },
+    {
+      "id": "paperclip.lvcchong",
+      "name": "驴充充 (已归档)",
+      "keys": [
+        "lvcchong_mp_auth"
+      ],
+      "settings": [],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/lvcchong",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/lvcchong/lvcchong.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/lvcchong.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/lvcchong.png"
+      ]
+    },
+    {
+      "id": "paperclip.lvcchong_app",
+      "name": "驴充充 App (已归档)",
+      "keys": [
+        "lvcchong_auth",
+        "lvcchong_notify_ts"
+      ],
+      "settings": [],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/lvcchong",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/lvcchong/lvcchong.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/lvcchong.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/lvcchong.png"
+      ]
+    },
+    {
+      "id": "paperclip.camscanner",
+      "name": "扫描全能王",
+      "keys": [
+        "camscanner_data",
+        "camscanner_clear",
+        "camscanner_debug"
+      ],
+      "settings": [
+        {
+          "id": "camscanner_data",
+          "name": "Cookie(Token)",
+          "val": "",
+          "type": "text",
+          "placeholder": "进 APP 自动抓，或手填",
+          "desc": "扫描全能王登录 Token(抓 get_user_attribute 自动写入);清空此项即等于清除 Cookie"
+        },
+        {
+          "id": "camscanner_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后运行一次会清空已抓 Token 并自动复位为关闭;之后重进 APP 重新抓取"
+        },
+        {
+          "id": "camscanner_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印取码/抽奖接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/camscanner",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/camscanner/camscanner.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/camscanner.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/camscanner.png"
+      ]
+    },
+    {
+      "id": "paperclip.wps",
+      "name": "WPS",
+      "keys": [
+        "wps_sid",
+        "wps_clear",
+        "wps_task_hot",
+        "wps_task_trial",
+        "wps_task_signin",
+        "wps_task_fragment",
+        "wps_task_lottery",
+        "wps_task_clockin",
+        "wps_debug"
+      ],
+      "settings": [
+        {
+          "id": "wps_sid",
+          "name": "Cookie(wps_sid)",
+          "val": "",
+          "type": "text",
+          "placeholder": "进活动页自动抓，或手填",
+          "desc": "WPS 登录态 wps_sid(长效，抓一次长期用);留空靠抓取自动写入"
+        },
+        {
+          "id": "wps_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后运行一次会清空已抓 wps_sid 并自动复位为关闭;之后重新抓取"
+        },
+        {
+          "id": "wps_task_hot",
+          "name": "限量爆款",
+          "type": "selects",
+          "desc": "福利中心限量爆款领取(每天 1 次，库存少放最前)",
+          "val": "true",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "wps_task_trial",
+          "name": "会员试用",
+          "type": "selects",
+          "desc": "会员免费试用瓜分，三档(7天/月卡/3个月卡)全部申领，次日开奖",
+          "val": "true",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "wps_task_signin",
+          "name": "每日签到",
+          "type": "selects",
+          "desc": "任务中心每日签到，积分 +1",
+          "val": "true",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "wps_task_fragment",
+          "name": "打卡领会员",
+          "type": "selects",
+          "desc": "福利中心连续打卡领会员",
+          "val": "true",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "wps_task_lottery",
+          "name": "天天抽奖",
+          "type": "selects",
+          "desc": "福利中心每日 1 次抽奖",
+          "val": "true",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "wps_task_clockin",
+          "name": "小程序打卡",
+          "type": "selects",
+          "desc": "WPS 小程序每日打卡，抽 PDF/图片权益包等",
+          "val": "true",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "wps_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印各任务接口原始响应(平时只看任务汇总)"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/wps",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/wps/wps.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/wps.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/wps.png"
+      ]
+    },
+    {
+      "id": "paperclip.sgcc",
+      "name": "网上国网",
+      "keys": [
+        "sgcc_data",
+        "sgcc_signin",
+        "sgcc_clear",
+        "sgcc_debug"
+      ],
+      "settings": [
+        {
+          "id": "sgcc_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开启后，运行一次签到脚本会清空已抓的 Cookie 与签到请求，完成后自动复位为关闭；之后重新开 App 进积分签到页抓取"
+        },
+        {
+          "id": "sgcc_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印每次签到的请求/响应日志"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/sgcc",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/sgcc/sgcc.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/sgcc.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/sgcc.png"
+      ]
+    },
+    {
+      "id": "paperclip.dreame",
+      "name": "追觅",
+      "keys": [
+        "dreame_data",
+        "dreame_clear",
+        "dreame_debug"
+      ],
+      "settings": [
+        {
+          "id": "dreame_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开后，运行下一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭，之后重新抓取"
+        },
+        {
+          "id": "dreame_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到 / 状态接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/dreame",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/dreame/dreame.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/dreame.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/dreame.png"
+      ]
+    },
+    {
+      "id": "paperclip.linghu",
+      "name": "灵狐灵购",
+      "keys": [
+        "linghu_data",
+        "linghu_clear",
+        "linghu_debug"
+      ],
+      "settings": [
+        {
+          "id": "linghu_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开后，运行下一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭，之后重新抓取"
+        },
+        {
+          "id": "linghu_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到 / 状态接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/linghu",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/linghu/linghu.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/linghu.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/linghu.png"
+      ]
+    },
+    {
+      "id": "paperclip.nodeseek",
+      "name": "NodeSeek",
+      "keys": [
+        "nodeseek_cookie",
+        "nodeseek_ua",
+        "nodeseek_random",
+        "nodeseek_relay_url",
+        "nodeseek_relay_key",
+        "nodeseek_debug"
+      ],
+      "settings": [
+        {
+          "id": "nodeseek_random",
+          "name": "随机鸡腿",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "固定"
+            },
+            {
+              "key": "true",
+              "label": "随机"
+            }
+          ],
+          "desc": "签到奖励模式：固定 = 每次 +5 鸡腿；随机 = 1-10 随机"
+        },
+        {
+          "id": "nodeseek_relay_url",
+          "name": "中继地址",
+          "val": "",
+          "type": "text",
+          "placeholder": "http://IP:3001/attend",
+          "desc": "VPS 中继服务器地址"
+        },
+        {
+          "id": "nodeseek_relay_key",
+          "name": "中继密钥",
+          "val": "",
+          "type": "text",
+          "placeholder": "中继 API Key",
+          "desc": "中继服务器 API Key（x-api-key）"
+        },
+        {
+          "id": "nodeseek_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印中继响应和分类结果（不打印 Cookie / 密钥）"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/nodeseek",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/nodeseek/nodeseek.js",
+      "scripts": [
+        {
+          "name": "主签到",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/nodeseek/nodeseek.js"
+        },
+        {
+          "name": "抓 Cookie",
+          "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/nodeseek/nodeseek.cookie.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/nodeseek.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/nodeseek.png"
+      ]
+    },
+    {
+      "id": "paperclip.baidunetdisk",
+      "name": "百度网盘",
+      "keys": [
+        "baidunetdisk_data",
+        "baidunetdisk_track",
+        "baidunetdisk_clear",
+        "baidunetdisk_debug"
+      ],
+      "settings": [
+        {
+          "id": "baidunetdisk_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开后，运行下一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭，之后重新抓取"
+        },
+        {
+          "id": "baidunetdisk_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到 / 状态接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/baidunetdisk",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/baidunetdisk/baidunetdisk.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/baidunetdisk.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/baidunetdisk.png"
+      ]
+    },
+    {
+      "id": "paperclip.milottery",
+      "name": "小米抽奖",
+      "keys": [
+        "milottery_data",
+        "milottery_clear",
+        "milottery_debug"
+      ],
+      "settings": [
+        {
+          "id": "milottery_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后运行一次脚本会清空已抓的 Cookie 与活动配置，完成后自动复位"
+        },
+        {
+          "id": "milottery_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印接口诊断日志，不输出 Cookie"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/milottery",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/app/milottery/milottery.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/mishop.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/mishop.png"
+      ]
+    },
+    {
+      "id": "paperclip.linli",
+      "name": "林里",
+      "keys": [
+        "linli_data",
+        "linli_clear",
+        "linli_debug",
+        "linli_task_exchange_coupon",
+        "linli_task_exchange_toy"
+      ],
+      "settings": [
+        {
+          "id": "linli_task_exchange_coupon",
+          "name": "兑换单杯免单券",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "默认关闭；开启后仅在商品售卖时间内检查库存并消耗 1 鸭币兑换"
+        },
+        {
+          "id": "linli_task_exchange_toy",
+          "name": "兑换游乐园周边",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "默认关闭；开启后仅在商品售卖时间内检查库存并消耗 1 鸭币兑换，实体订单仍待真机验证"
+        },
+        {
+          "id": "linli_clear",
+          "name": "清除 Cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "设为开后，运行下一次签到脚本会清空已抓的 Cookie，完成后自动复位为关闭，之后重新抓取"
+        },
+        {
+          "id": "linli_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "开启后打印签到、商品和兑换接口原始响应"
+        }
+      ],
+      "author": "@MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/miniprogram/linli",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/main/miniprogram/linli/linli.js",
+      "icons": [
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/linli.png",
+        "https://raw.githubusercontent.com/MaYIHEI/pin/main/app/linli.png"
+      ]
+    },
+    {
+      "id": "paperclip.agentrouter",
+      "name": "AgentRouter（Surge / QX / Stash）",
+      "keys": [
+        "agentrouter_username",
+        "agentrouter_password",
+        "agentrouter_clear",
+        "agentrouter_debug"
+      ],
+      "settings": [
+        {
+          "id": "agentrouter_username",
+          "name": "账号",
+          "val": "",
+          "type": "text",
+          "placeholder": "网站账号或邮箱",
+          "desc": "其他平台在此填写网站账号；Loon 请直接在插件设置中填写账号密码，不使用本页配置"
+        },
+        {
+          "id": "agentrouter_password",
+          "name": "密码",
+          "val": "",
+          "type": "text",
+          "placeholder": "网站登录密码",
+          "desc": "单独填写密码，首尾空格会保留；不要分享含账号密码的 BoxJS 备份"
+        },
+        {
+          "id": "agentrouter_clear",
+          "name": "清除账号信息",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后运行一次脚本会清空账号密码并自动关闭，不发起签到"
+        },
+        {
+          "id": "agentrouter_debug",
+          "name": "调试模式",
+          "val": "false",
+          "type": "selects",
+          "items": [
+            {
+              "key": "false",
+              "label": "关闭"
+            },
+            {
+              "key": "true",
+              "label": "开启"
+            }
+          ],
+          "desc": "仅打印 HTTP 状态和签到判定，不打印账号密码、Cookie 或完整响应"
+        }
+      ],
+      "author": "@773075692, 移植 @MaYIHEI",
+      "repo": "https://github.com/Timkeltis/scrips/tree/main/app/agentrouter",
+      "script": "https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/agentrouter/agentrouter.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/agentrouter/icon.png",
+        "https://raw.githubusercontent.com/Timkeltis/scrips/refs/heads/main/app/agentrouter/icon.png"
+      ]
+    }
+  ]
+}
