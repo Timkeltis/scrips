@@ -1,5 +1,7 @@
 > **个人备份**：源自 [MaYIHEI/paperclip](https://github.com/MaYIHEI/paperclip)，保留原作者与许可证。脚本下载链接已指向 Timkeltis/scrips。请先阅读 [迁移说明](./BACKUP.md)。
 
+完整来源与第三方归属见 [SOURCES.md](./SOURCES.md)。
+
 # 📎 paperclip
 
 小程序签到 & 代理重写脚本合集 · Loon / Surge / Quantumult X / Stash
